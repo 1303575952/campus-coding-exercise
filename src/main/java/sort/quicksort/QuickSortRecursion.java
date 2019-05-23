@@ -2,7 +2,10 @@ package sort.quicksort;
 
 import java.util.Arrays;
 
-public class QuickSort {
+/**
+ * 快速排序递归
+ */
+public class QuickSortRecursion {
 
     private static void quicksort(int[] arr) {
         int n = arr.length;
