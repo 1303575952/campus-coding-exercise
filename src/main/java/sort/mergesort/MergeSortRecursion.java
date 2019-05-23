@@ -3,9 +3,24 @@ package sort.mergesort;
 import java.util.Arrays;
 
 public class MergeSortRecursion {
+    public static void sort(int[] arr) {
+        int n = arr.length;
+        sort(arr, 0, n - 1);
+    }
+
+    // 递归使用归并排序,对arr[l...r]的范围进行排序
+    private static void sort(int[] arr, int l, int r) {
+        if (l >= r)
+            return;
+
+        int mid = (l + r) / 2;
+        sort(arr, l, mid);
+        sort(arr, mid + 1, r);
+        merge(arr, l, mid, r);
+    }
+
     // 将arr[l...mid]和arr[mid+1...r]两部分进行归并
     private static void merge(int[] arr, int l, int mid, int r) {
-
         int[] aux = Arrays.copyOfRange(arr, l, r + 1);
 
         // 初始化，i指向左半部分的起始索引位置l；j指向右半部分起始索引位置mid+1
@@ -26,24 +41,6 @@ public class MergeSortRecursion {
                 j++;
             }
         }
-    }
-
-    // 递归使用归并排序,对arr[l...r]的范围进行排序
-    private static void sort(int[] arr, int l, int r) {
-
-        if (l >= r)
-            return;
-
-        int mid = (l + r) / 2;
-        sort(arr, l, mid);
-        sort(arr, mid + 1, r);
-        merge(arr, l, mid, r);
-    }
-
-    public static void sort(int[] arr) {
-
-        int n = arr.length;
-        sort(arr, 0, n - 1);
     }
 
     public static void main(String[] args) {
