@@ -2,6 +2,9 @@ package sort.mergesort;
 
 import java.util.Arrays;
 
+/**
+ * 归并排序递归
+ */
 public class MergeSortRecursion {
     public static void sort(int[] arr) {
         int n = arr.length;
