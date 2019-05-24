@@ -7,7 +7,7 @@ import java.util.HashSet;
 /**
  * 字符串排列
  */
-public class string {
+public class StringPermutation {
     private static ArrayList<String> permutation(String str) {
         ArrayList<String> re = new ArrayList<String>();
         if (str == null || str.length() == 0) {
