@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * 树的层次遍历
+ */
 public class LevelTraversal {
     public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
