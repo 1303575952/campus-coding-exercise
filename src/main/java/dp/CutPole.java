@@ -1,8 +1,9 @@
 package dp;
 
 /**
- * 切割杆，现有长度为len的杆，价值数组是p[]，数组长度是len+1，已知长度i对应的价值是prices[i]，
- * 比如长度1对应的价值数是p[1]。将其切割，求碎片的最大价值。
+ * 切割杆，现有长度为len的杆，价值数组是p[]，数组长度是len+1，已知长度i对应的价值是p[i]，
+ * len为整数，杆仅能被切割为整数长度。
+ * 比如长度1对应的价值数是p[1]。将其切割，求杆被切割后的最大价值。
  */
 public class CutPole {
     private int findMaxValue(int len, int[] p) {
