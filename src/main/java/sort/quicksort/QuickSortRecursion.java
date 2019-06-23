@@ -23,13 +23,15 @@ public class QuickSortRecursion {
                 j--;
             }
             if (i < j) {
-                arr[i++] = arr[j];
+                arr[i] = arr[j];
+                i++;
             }
             while (i < j && arr[i] <= pivotKey) {
                 i++;
             }
             if (i < j) {
-                arr[j--] = arr[i];
+                arr[j] = arr[i];
+                j--;
             }
         }
         arr[i] = pivotKey;
