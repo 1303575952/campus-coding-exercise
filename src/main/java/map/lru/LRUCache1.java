@@ -9,7 +9,7 @@ import java.util.Map;
  * @param <K>
  * @param <V>
  */
-class LRUCache<K, V> extends LinkedHashMap<K, V> {
+public class LRUCache1<K, V> extends LinkedHashMap<K, V> {
     private static final int MAX_ENTRIES = 3;
 
     @Override
@@ -17,12 +17,12 @@ class LRUCache<K, V> extends LinkedHashMap<K, V> {
         return size() > MAX_ENTRIES;
     }
 
-    LRUCache() {
+    LRUCache1() {
         super(MAX_ENTRIES, 0.75f, true);
     }
 
     public static void main(String[] args) {
-        LRUCache<Integer, String> cache = new LRUCache<>();
+        LRUCache1<Integer, String> cache = new LRUCache1<>();
         cache.put(1, "a");
         cache.put(2, "b");
         cache.put(3, "c");
@@ -31,3 +31,4 @@ class LRUCache<K, V> extends LinkedHashMap<K, V> {
         System.out.println(cache.keySet());
     }
 }
+
